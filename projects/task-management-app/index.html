@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rstar Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">R</div>
+          <div>
+            <p class="brand-label">Rstar</p>
+            <strong>Task Manager</strong>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <button class="nav-item active" data-view="overview">Overview</button>
+          <button class="nav-item" data-view="tasks">Tasks</button>
+          <button class="nav-item" data-view="calendar">Calendar</button>
+          <button class="nav-item" data-view="reports">Reports</button>
+        </nav>
+
+        <div class="sidebar-section">
+          <p class="section-title">Project</p>
+          <div class="project-card">
+            <p class="project-name">Alpha Launch</p>
+            <p class="project-meta">Product rollout & team coordination</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Project view</p>
+            <h1>Task Management Dashboard</h1>
+          </div>
+          <div class="user-panel">
+            <button class="btn-secondary">Create task</button>
+            <div class="profile">
+              <span>JD</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="overview-grid">
+          <article class="stat-card">
+            <p class="stat-label">Active tasks</p>
+            <h2 id="active-count">0</h2>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Completed</p>
+            <h2 id="completed-count">0</h2>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Due soon</p>
+            <h2 id="due-count">0</h2>
+          </article>
+          <article class="stat-card accent-card">
+            <p class="stat-label">Project progress</p>
+            <h2 id="progress-count">0%</h2>
+          </article>
+        </section>
+
+        <section class="panel-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Quick actions</p>
+                <h2>Upcoming tasks</h2>
+              </div>
+              <button class="btn-text" id="show-all">Show all</button>
+            </div>
+            <div id="task-list" class="task-list"></div>
+          </article>
+
+          <article class="panel panel-secondary">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Project flow</p>
+                <h2>Milestones</h2>
+              </div>
+            </div>
+            <ul class="milestone-list" id="milestone-list"></ul>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Create task</p>
+              <h2>Add a new card</h2>
+            </div>
+          </div>
+          <form id="task-form" class="task-form">
+            <div class="field-row">
+              <label for="task-title">Title</label>
+              <input id="task-title" type="text" placeholder="Design landing page" required />
+            </div>
+            <div class="field-row">
+              <label for="task-owner">Owner</label>
+              <input id="task-owner" type="text" placeholder="Team member" />
+            </div>
+            <div class="field-row split-row">
+              <div>
+                <label for="task-due">Due date</label>
+                <input id="task-due" type="date" />
+              </div>
+              <div>
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn-primary" type="submit">Add task</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

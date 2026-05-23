@@ -1,0 +1,359 @@
+:root {
+  --bg: #f2f6fb;
+  --surface: #ffffff;
+  --surface-strong: #e2ecfb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Inter, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  padding: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.dashboard-sidebar {
+  background: #0f172a;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-item {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: rgba(37, 99, 235, 0.2);
+  color: white;
+}
+
+.dashboard-main {
+  padding: 2rem 2.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.profile-card {
+  background: var(--surface);
+  padding: 1.35rem 1.5rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--border);
+  min-width: 220px;
+}
+
+.profile-card .small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.profile-card .large {
+  margin: 0.65rem 0 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 1.1rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+}
+
+.card-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card h2 {
+  margin: 0.8rem 0 0;
+  font-size: 1.75rem;
+}
+
+.card-primary {
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.card-secondary {
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.card-accent {
+  border-color: rgba(234, 88, 12, 0.15);
+}
+
+.card-tertiary {
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+.accounts-section,
+.transactions-section,
+.chart-section {
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  padding: 1.5rem;
+  min-height: 320px;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.trend-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trend-toggle {
+  display: inline-flex;
+  gap: 0.6rem;
+}
+
+.account-toggle {
+  display: inline-flex;
+  gap: 0.6rem;
+}
+
+.toggle-button {
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.toggle-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.toggle-button:hover {
+  border-color: var(--primary);
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.btn-outline {
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.9rem;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.account-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.account-card {
+  background: var(--surface);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+
+.account-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.account-type {
+  margin: 0;
+  font-weight: 700;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.account-number,
+.account-balance {
+  margin: 0.85rem 0 0;
+}
+
+.account-balance {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.transactions-table-wrap {
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  background: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.transactions-table th {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.transactions-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.transactions-table td {
+  color: var(--text);
+}
+
+.amount.positive {
+  color: var(--success);
+}
+
+.amount.negative {
+  color: var(--danger);
+}
+
+@media (max-width: 1040px) {
+  .dashboard-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .dashboard-main {
+    padding: 1.5rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-table {
+    min-width: 100%;
+  }
+}

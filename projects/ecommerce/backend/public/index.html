@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rstar Market Sample | Professional Ecommerce</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header>
+        <div class="brand">
+          <div class="brand-mark">R</div>
+          <div>
+            <strong>Rstar Market Sample</strong>
+            <p style="margin:0; color:var(--muted); font-size:0.95rem;">Professional ecommerce experience</p>
+          </div>
+        </div>
+        <nav>
+          <a href="#featured">Featured</a>
+          <a href="#projects">Projects</a>
+          <a href="#categories">Categories</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Marketplace</p>
+          <h1>Buy premium products, discover curated projects, and sell with confidence.</h1>
+          <p>Explore a professional ecommerce storefront built for modern buyers. Filter by category, review top offers, and discover curated side projects from our featured sellers.</p>
+
+          <div class="search-card">
+            <label for="search">Search the marketplace</label>
+            <input id="search" type="search" placeholder="Search for gadgets, home goods, fashion, and more" autocomplete="off" />
+            <div id="suggestions" class="suggestions" aria-live="polite"></div>
+            <button id="search-btn" type="button">Search listings</button>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-banner">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" alt="Ecommerce marketplace hero" />
+          </div>
+          <div class="highlight-banner">
+            <h3>Trusted marketplace experience</h3>
+            <p>Professional-grade product curation, fast shipping badges, and quality seller projects for inspired shopping.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Top Deals</p>
+            <h2>Featured listings</h2>
+          </div>
+          <p>Browse curated ecommerce products designed for business, lifestyle, and tech buyers.</p>
+        </div>
+        <div id="product-grid" class="grid-cols"></div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>Popular categories</h2>
+          </div>
+          <p>Quick filters help buyers discover relevant collections.</p>
+        </div>
+        <div class="grid-cols">
+          <div class="card card-small">
+            <div class="card-content">
+              <p class="card-badge">Electronics</p>
+              <h3 class="product-title">Smart devices & wearables</h3>
+              <p class="product-description">High-quality tech for productivity, fitness, and everyday convenience.</p>
+            </div>
+          </div>
+          <div class="card card-small">
+            <div class="card-content">
+              <p class="card-badge">Home</p>
+              <h3 class="product-title">Design-forward home goods</h3>
+              <p class="product-description">Premium décor and furniture that elevate your workspace or living area.</p>
+            </div>
+          </div>
+          <div class="card card-small">
+            <div class="card-content">
+              <p class="card-badge">Fashion</p>
+              <h3 class="product-title">Style essentials</h3>
+              <p class="product-description">Curated accessories, leather goods, and premium wardrobe staples.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Project showcase</p>
+            <h2>Curated side projects</h2>
+          </div>
+          <p>Discover unique product launches and creator projects from our marketplace community.</p>
+        </div>
+        <div id="project-grid" class="grid-cols"></div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rstar Bank Dashboard</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <div class="brand">Rstar Bank</div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active">Overview</button>
+          <button class="nav-item">Accounts</button>
+          <button class="nav-item">Transactions</button>
+          <button class="nav-item">Reports</button>
+        </nav>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Welcome back,</p>
+            <h1>Fintech Dashboard</h1>
+          </div>
+          <div class="profile-card">
+            <div>
+              <p class="small">Available Balance</p>
+              <p class="large" id="total-balance">$0.00</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="overview-cards">
+          <article class="card card-primary">
+            <p class="card-label">Total balance</p>
+            <h2 id="overview-balance">$0.00</h2>
+          </article>
+          <article class="card card-secondary">
+            <p class="card-label">Monthly income</p>
+            <h2 id="overview-income">$0.00</h2>
+          </article>
+          <article class="card card-accent">
+            <p class="card-label">Monthly spending</p>
+            <h2 id="overview-spending">$0.00</h2>
+          </article>
+          <article class="card card-tertiary">
+            <p class="card-label">Available credit</p>
+            <h2 id="overview-credit">$0.00</h2>
+          </article>
+        </section>
+
+        <section class="chart-section">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Spending insights</p>
+              <h2>Spending Trends</h2>
+            </div>
+            <div class="trend-toggle-group">
+              <div class="trend-toggle" role="tablist" aria-label="Trend toggle">
+                <button type="button" class="toggle-button active" data-trend="daily">Daily</button>
+                <button type="button" class="toggle-button" data-trend="monthly">Monthly</button>
+              </div>
+              <div class="account-toggle" id="account-toggle">
+                <button type="button" class="toggle-button active" data-account="current">Current</button>
+                <button type="button" class="toggle-button" data-account="saving">Saving</button>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <canvas id="spending-chart"></canvas>
+          </div>
+        </section>
+
+        <section class="accounts-section">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Account Summary</p>
+              <h2>Accounts</h2>
+            </div>
+            <button class="btn-outline">Add account</button>
+          </div>
+
+          <div id="account-list" class="account-list"></div>
+        </section>
+
+        <section class="transactions-section">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Recent activity</p>
+              <h2>Latest Transactions</h2>
+            </div>
+            <button class="btn-outline">View all</button>
+          </div>
+
+          <div class="transactions-table-wrap">
+            <table class="transactions-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="transaction-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
