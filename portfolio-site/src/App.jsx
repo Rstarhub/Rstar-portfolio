@@ -74,7 +74,7 @@ export default function App() {
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>
-            <a href="mailto:vicroll990@gmail.com" target="_blank" rel="noreferrer noopener" className="btn btn-secondary">Get in Touch</a>
+            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" target="_blank" rel="noreferrer noopener" className="btn btn-secondary">Get in Touch</a>
           </div>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function App() {
           <p className="section-subtitle">I'm open to new opportunities and interesting projects</p>
           
           <div className="contact-links">
-            <a href="mailto:vicroll990@gmail.com" className="contact-link">
+            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" className="contact-link">
               📧 Email
             </a>
             <a href="https://github.com/Rstarhub" target="_blank" rel="noreferrer" className="contact-link">
