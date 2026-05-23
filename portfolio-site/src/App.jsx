@@ -74,7 +74,7 @@ export default function App() {
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>
-            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" target="_blank" rel="noreferrer noopener" className="btn btn-secondary">Get in Touch</a>
+            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" className="btn btn-secondary">Get in Touch</a>
           </div>
         </div>
       </section>
