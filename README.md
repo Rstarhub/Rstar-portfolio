@@ -1,46 +1,85 @@
-# Full-Stack Developer Portfolio Workspace
+# Rstar Full-Stack Developer Portfolio Workspace
 
-This workspace contains a portfolio site and two example full-stack projects:
+This workspace contains multiple frontend and backend demo projects for portfolio and app prototypes.
 
-- `portfolio-site` — a small React + Vite portfolio you can customize.
-- `projects/fintech` — example fintech project (Express backend serving static frontend).
-- `projects/ecommerce` — example ecommerce project (Express backend serving static frontend).
+## Included projects
 
-Quick start (from workspace root):
+- `portfolio-site` — React + Vite portfolio site.
+- `projects/analytics` — analytics dashboard with Express backend serving a static dashboard.
+- `projects/fintech/backend` — fintech dashboard demo with Express API and static React-like frontend.
+- `projects/ecommerce/backend` — ecommerce storefront demo with Express backend and static frontend.
+- `projects/task-management-app` — static task management landing page demo.
 
-1. Install dependencies for each project:
+## Setup
+
+Install dependencies for each project that includes a `package.json` file.
 
 ```bash
 cd portfolio-site
 npm install
 
-cd ../projects/fintech/backend
+cd ../projects/analytics/backend
+npm install
+
+cd ../fintech/backend
 npm install
 
 cd ../ecommerce/backend
 npm install
 ```
 
-2. Run the portfolio dev server:
+## Run locally
+
+### Portfolio site
 
 ```bash
 cd portfolio-site
 npm run dev
 ```
 
-3. Start example project servers (each serves its own frontend):
+Default URL:
+
+- `http://localhost:5173/`
+
+### Analytics dashboard
+
+```bash
+cd projects/analytics/backend
+npm start
+```
+
+Default URL:
+
+- `http://localhost:4004/`
+
+### Fintech app
 
 ```bash
 cd projects/fintech/backend
 npm start
+```
 
-cd ../ecommerce/backend
+Default URL:
+
+- `http://localhost:4001/`
+
+### Ecommerce app
+
+```bash
+cd projects/ecommerce/backend
 npm start
 ```
 
-Open the portfolio at the URL printed by `npm run dev`, and the project frontends at:
+Default URL:
 
-- Fintech: http://localhost:4001
-- Ecommerce: http://localhost:4002
+- `http://localhost:4002/`
 
-Customize components, styles, and APIs to build out your portfolio.
+### Task management demo
+
+This demo is a plain static site. Open `projects/task-management-app/index.html` directly, or serve it with a static server / VS Code Live Server.
+
+## Notes
+
+- Each backend project uses Express and serves its static frontend from the `public` folder.
+- If you need to change the port, set the `PORT` environment variable before running `npm start`.
+- Use a browser to verify the site is available after starting the local server.
