@@ -7,7 +7,7 @@ export default function App() {
       title: 'Fintech Dashboard',
       description: 'A real-time financial account dashboard with balance tracking, transaction history, and account management. Built with React, Express, and RESTful APIs.',
       tech: ['React', 'Node.js', 'Express', 'JavaScript'],
-      link: 'http://localhost:4001',
+      link: 'https://rstar-portfolio-fintech.vercel.app/',
       featured: true,
       image: '💰'
     },
@@ -16,7 +16,7 @@ export default function App() {
       title: 'Ecommerce Platform',
       description: 'Full-featured ecommerce storefront with product catalog, shopping cart, and checkout flow. Demonstrates backend API integration and frontend state management.',
       tech: ['React', 'Node.js', 'Express', 'REST API'],
-      link: 'http://localhost:4002',
+      link: 'https://rstar-portfolio-ecommerce.vercel.app/',
       featured: true,
       image: '🛍️'
     },
@@ -25,7 +25,7 @@ export default function App() {
       title: 'Task Management App',
       description: 'Collaborative task management tool with real-time updates, user authentication, and team workspace features.',
       tech: ['React', 'Node.js', 'MongoDB', 'WebSockets'],
-      link: 'http://localhost:4003',
+      link: 'https://rstar-portfolio-timemanagementapp.vercel.app/',
       featured: false,
       image: '✓'
     },
@@ -34,7 +34,7 @@ export default function App() {
       title: 'Analytics Dashboard',
       description: 'Data visualization dashboard with interactive charts, real-time metrics, and custom reporting capabilities.',
       tech: ['React', 'D3.js', 'Node.js', 'PostgreSQL'],
-      link: 'http://localhost:4004',
+      link: 'https://rstar-portfolio-analytics.vercel.app/',
       featured: false,
       image: '📊'
     }
@@ -74,7 +74,7 @@ export default function App() {
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>
-            <a href="mailto:vicroll990@gmail.com" target="_blank" rel="noreferrer noopener" className="btn btn-secondary">Get in Touch</a>
+            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" className="btn btn-secondary">Get in Touch</a>
           </div>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function App() {
           <p className="section-subtitle">I'm open to new opportunities and interesting projects</p>
           
           <div className="contact-links">
-            <a href="mailto:vicroll990@gmail.com" className="contact-link">
+            <a href="mailto:vicroll990@gmail.com?subject=Project%20Inquiry%20-%20Portfolio" className="contact-link">
               📧 Email
             </a>
             <a href="https://github.com/Rstarhub" target="_blank" rel="noreferrer" className="contact-link">

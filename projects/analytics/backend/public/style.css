@@ -1,6 +1,7 @@
 :root {
   --bg: #eff3f9;
   --surface: #ffffff;
+  --surface-alt: #f8fafc;
   --surface-muted: #f8fafc;
   --text: #0f172a;
   --muted: #64748b;
@@ -203,8 +204,9 @@ body {
 
 .charts-grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  align-items: start;
 }
 
 .chart-panel,
@@ -215,8 +217,25 @@ body {
   padding: 1.5rem;
 }
 
+.chart-panel {
+  display: flex;
+  flex-direction: column;
+}
+
 .chart-secondary {
   background: var(--surface-muted);
+}
+
+.chart-frame {
+  position: relative;
+  min-height: 360px;
+  width: 100%;
+}
+
+.chart-frame canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 .panel-header {
